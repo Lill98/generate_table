@@ -24,14 +24,19 @@ class Table:
     def create_style(self):
         self.html+="<head><style>"
         self.html+="html{width:1366px;height:768px;background-color: white;}table{"
-        self.html += """ border-collapse: collapse; background-image: url("/Users/tuananh/Downloads/TIES_DataGeneration/background_image/Screen Shot 2022-02-20 at 16.13.07.png"); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;"""
+        # self.html += """ border:1px dashed black; border-collapse: collapse;"""
+        self.html += """border-collapse: collapse; border-color:#7F7E7E;border-style:solid;""" #border:1px solid black; 
 
         #random center align
         if(random.randint(0,1)==1):
             self.html+="text-align:center;"
             #  style="width:100%","height:100%"
         self.html+= "width:100%;height:80%"
-        self.html+="""}th, td{border:1px dashed black; border-collapse: collapse"""
+        # self.html+="""}td,th{border: 0.2px dashed black;"""
+        self.html+="""}td{border-style:solid;border-color:#7F7E7E;"""
+        self.html+="""}th{border-style:solid; background-color:#918E8E;border-color:#7F7E7E;"""
+#solid black border: 1px solid black;
+        
 
         # if (random.randint(0, 1) == 1):  # border or non-border
         #     self.html += """ border:1px solid black; """
@@ -53,7 +58,7 @@ class Table:
 
     def create_table(self):
 
-        self.html+="""<table>"""
+        self.html+="""<table background="/Users/lill98/Documents/EHR/data/generate_table/TIES_DataGeneration/background/bg1.jpeg">"""
 
         self.define_col()
         if (self.no_of_cols > 1):
@@ -108,7 +113,11 @@ class Table:
 
 
     def create_headers(self):
-        self.html += "<tr>"
+        if(random.randint(0,1)==1):
+            self.html+="<tr background-color=#CDCCCC>"
+        else:
+            self.html += "<tr>"
+        self.html+="<tr background-color=#CDCCCC>"
 
         start_row = self.id_count
 

@@ -1,5 +1,1 @@
 selenium==3.141.0
-numpy
-opencv-python
-pillow
-tqdm

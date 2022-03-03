@@ -129,13 +129,13 @@ class GenerateTFRecord:
     def draw_col_matrix(self,im,arr,matrix):
 
         no_of_words=len(arr)
-        print('matrix shape',matrix.shape)
+        # print('matrix shape',matrix.shape)
         cv2.imwrite('hassan12.jpg',im)
         im=im.astype(np.uint8)
         arr=arr[:,2:]
         im=np.dstack((im,im,im))
         #im=cv2.cvtColor(im,cv2.COLOR_GRAY2BGR)
-        print(arr)
+        # print(arr)
         x=2
         indices=np.argwhere(matrix[x]==1)
         print('\n\nindices:',indices)

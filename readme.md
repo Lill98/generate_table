@@ -7,10 +7,6 @@ pip install -r requirement.txt
 ```
 # 1. generate background image
 
-```
-python crop_image_background.py
-```
-
 #2. generate image with white background
 ```
 python generate_tables.py
